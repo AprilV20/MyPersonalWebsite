@@ -1,0 +1,177 @@
+body {
+    background-image: url('../images/cutewallMexicojpg.jpg');
+    background-size: cover;  /* Cover the entire page */
+    background-position: center;  
+    background-repeat: no-repeat;  /* Do not repeat the image */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: white;
+    background-attachment: fixed;
+    padding: 1.25rem;
+    margin: 0;
+}
+header {
+    text-align: center;
+    margin-bottom: 1.25rem;
+    color:white;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.3rem;
+}
+
+nav {
+    width: 100%;
+    background: transparent;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 1.25rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.625rem;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: blue;
+}
+
+main {
+    
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 2rem;
+}
+
+/* .hidden {
+    display: none;
+} */
+
+.blog-post {
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 0.625rem;
+    padding: 1.25rem;
+    color: black; 
+}
+
+.blog-post h2 {
+    color: black; 
+}
+
+.read-more-btn {
+    background-color: pink; 
+    color: white;
+    border: none;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+.read-more-btn:hover {
+    background-color: blue; 
+}
+
+.full-post {
+    display: none; 
+    margin-top: 1rem;
+    font-size: 1rem; 
+}
+
+
+.download-itinerary-btn {
+    background-color: pink; 
+    color: white;
+    text-decoration: none;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
+    display: inline-block; 
+    margin-top: 1rem; 
+    
+}
+
+.download-itinerary-btn:hover {
+    background-color: blue; 
+}
+
+.photos-link-btn {
+    
+    color: white;  
+}
+
+.photos-link-btn:hover {
+    color:blue;
+}
+
+
+footer {
+    background-color: palevioletred;
+    color: white;
+    padding: 0.9375rem 1.875rem; 
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.85rem;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover, footer a:focus {
+    color: #ffc0cb;
+}
+
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;  
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;  
+        margin-right: 0;
+        margin-bottom: 0.5rem; 
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;  
+    }
+
+    .blog-post {
+        flex-direction: column;
+        margin-bottom: 1rem;  
+    }
+
+    .post-content {
+        flex: 1 1 100%; 
+    }
+}

@@ -1,0 +1,229 @@
+/* April Villeda */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Calibri, sans-serif;
+    background-color: lavenderblush;
+}
+
+header {
+    background-image: url('../images/cutewallMexicojpg.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+header .header-content {
+    padding: 6.25rem 1.25rem;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.5rem;
+}
+
+/* Navigation Styles */
+nav {
+    
+    width: 100%;
+    background: transparent;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 1.25rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.625rem;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: blue;
+}
+
+
+/* Call to Action Button */
+header .header-content a.cta-button {
+    background-color: pink;
+    color: white;
+    padding: 0.625rem 1.25rem; 
+    text-decoration: none;
+    border-radius: 0.3125rem;
+    display: inline-block;
+    margin-top: 1.25rem;
+}
+
+header .header-content a.cta-button:hover {
+    background-color: pink;
+}
+
+/* About Section Styles */
+
+
+
+#about {
+    background-color: white;
+    padding: 3.125rem 1.25rem;
+    text-align: center; 
+}
+
+#about h3 {
+    color: black;
+    margin:0.3125rem 0;
+}
+
+#about p {
+    color:black;
+    text-align: center;
+}
+#about a {
+    color: blue;
+    text-decoration: none;
+}
+
+#about a:hover {
+    color: pink;
+}
+
+/* blog Section Styles */
+#blog  {
+    background-color: white;
+    padding:3.125rem 1.25rem;
+    text-align: center;
+}
+
+#blog h3 {
+    color: black;
+    margin: 0.3125rem 0;
+}
+
+#blog p {
+    color:black;
+    text-align: center;
+}
+
+#blog a {
+    color: blue;
+    text-decoration: none;
+}
+
+#blog a:hover {
+    color: pink;
+}
+/* About portfolio Styles */
+#portfolio {
+    background-color: white;
+    padding:3.125rem 1.25rem;
+    text-align: center;
+}
+#portfolio p {
+    color:black;
+    text-align: center;
+}
+
+#portfolio h3 {
+    color:black;
+    margin: 0.3125rem 0;
+}
+
+#portfolio a {
+    color: blue;
+    text-decoration: none;
+}
+
+
+#portfolio  a:hover {
+    color: pink;
+}
+
+
+#contact {
+    background-color: #f9f9f9;
+    padding: 3.125rem 1.25rem;
+    text-align: center;
+}
+
+#contact form {
+    max-width: 37.5rem;
+    margin: auto;
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 0.625rem; 
+    margin: 0.625rem 0;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+}
+
+#contact button {
+    padding: 0.625rem;
+    background-color: pink;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: pink;
+}
+
+
+
+/* Footer Styles */
+footer {
+    background-color: palevioletred;
+    color: white;
+    padding: 0.9375rem 1.875rem; 
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.85rem;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover, footer a:focus {
+    color: #ffc0cb;
+}
+
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; 
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 0; 
+    }
+}
+
+

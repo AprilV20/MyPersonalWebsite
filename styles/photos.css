@@ -1,0 +1,101 @@
+body {
+    background-image: url('../images/photobackground.jpeg');
+    background-size: cover;  /* Cover the entire page */
+    background-position: center;  
+    background-repeat: no-repeat;  /* Do not repeat the image */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: hotpink;
+    background-attachment: fixed;
+    padding: 1.25rem;
+    margin: 0;
+}
+header {
+    text-align: center;
+    margin-bottom: 1.25rem;
+    color:hotpink;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.3rem;
+}
+
+nav {
+    width: 100%;
+    background: transparent;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 1.25rem;
+}
+
+nav ul li a {
+    color: hotpink;
+    text-decoration: none;
+    padding: 0.625rem;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: blue;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.625rem; 
+    padding: 1.25rem; 
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 18.75rem; 
+    height: auto;
+    border-radius: 0.5rem; 
+}
+
+
+footer {
+    background-color: palevioletred;
+    color: white;
+    padding: 0.9375rem 1.875rem; 
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.85rem;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover, footer a:focus {
+    color: #ffc0cb;
+}
+
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; 
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 0; 
+    }
+}
