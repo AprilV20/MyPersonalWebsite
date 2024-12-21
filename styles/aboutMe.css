@@ -12,48 +12,42 @@ html {
 body {background-color: mistyrose;}
 
 
+/* Navigation Styles */
 nav {
-    background-color: palevioletred;
-    text-align: center;
-    padding: 1rem 0;
-    display: block;
-    text-decoration: none; 
-    font-size: 1rem; 
-    /* padding-top: 10px ;
-    padding-bottom: 10px;
-    padding-left: 0px;
-    padding-right: 0px; */
-    display: block;
-    text-decoration: none; 
-    
-    
+    width: 100%;
+    background: rgba(255, 192, 203, 0.8);
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 10;
+
 }
 
 nav ul {
-    
-    display: flex;
-    justify-content: center;
-    position: relative;
-    margin: 0;
     padding: 0;
-    list-style-type: none; 
+    list-style: none;
+    text-align: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 1.25rem;
+    display: inline-block;
+    margin-right: 1.25rem;
 }
 
 nav ul li a {
-    text-decoration: none;
     color: white;
+    font-family: Georgia;
+    /* font-size: 1.25rem; */
+    font-weight: bold;
+    text-decoration: none;
     padding: 0.625rem;
     display: block;
-    
 }
+
 nav ul li a:hover {
-    color: blue;
+    color: hotpink;
 }
+
 body {
     font-family: Arial, Calibri, sans-serif;
     margin: 0 auto; 
@@ -101,28 +95,49 @@ body {
 
 
 
-
-
- footer {
-    background-color: palevioletred;
+/* Footer Styles */
+footer {
+    background: linear-gradient(90deg, palevioletred, hotpink);
     color: white;
-    padding: 0.9375rem 1.875rem;
+    padding: 1.5rem 1rem;
     text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
-footer p {
-    font-size: 0.85em;
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Footer Info Section */
+.footer-info p {
+    font-size: 0.875rem; /* Slightly larger for readability */
+    margin: 0.25rem 0;
 }
 
 footer a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-footer a:hover, footer a:focus {
-    color: #ffc0cb;
+footer a:hover,
+footer a:focus {
+    color: #ffb6c1;
 }
 
+/* Responsive Design */
+/* @media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+} */
 
 @media (max-width: 768px) {
     body {

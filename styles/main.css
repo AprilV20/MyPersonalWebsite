@@ -11,7 +11,8 @@ body {
     background-size: cover; /* Make the image cover the full screen */
     background-position: center; 
     background-repeat: no-repeat; 
- 
+        
+
     
 }
 
@@ -94,29 +95,26 @@ header .header-content a.cta-button:hover {
     background-color: pink;
 }
 
-/* About Section Styles */
 
+/* About Section */
 #about {
-    
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem 1rem;
-    background-color:white;
-  
+    /* background-color: white; */
+
     color: black;
-    
 }
 
 #about h2 {
     font-family: 'Georgia', serif;
     font-size: 2.5rem;
     color: black;
-
 }
 
 /* About Section Container */
-.about-container {
+#about .about-container {
     display: flex;
     flex-direction: row; 
     align-items: center;
@@ -127,13 +125,13 @@ header .header-content a.cta-button:hover {
 }
 
 /* Flip Card Styles */
-.flip-card {
-    width: 18.75rem;
-    height: 25rem;
-    perspective: 62.5rem; /* Enables 3D flip effect */
+#about .flip-card {
+    width: 15rem;
+    height: 20rem;
+    perspective: 50rem; /* Enables 3D flip effect */
 }
 
-.flip-card-inner {
+#about .flip-card-inner {
     width: 100%;
     height: 100%;
     transition: transform 0.7s;
@@ -141,11 +139,11 @@ header .header-content a.cta-button:hover {
     position: relative;
 }
 
-.flip-card:hover .flip-card-inner {
+#about .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+#about .flip-card-front, #about .flip-card-back {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -155,31 +153,28 @@ header .header-content a.cta-button:hover {
     align-items: center;
     justify-content: center;
     border-radius: 0.625rem;
-    box-shadow:0 0.25rem 0.5rem rgba(255, 192, 203, 0.8);
+    box-shadow: 0 0.25rem 0.5rem rgba(255, 192, 203, 0.8);
     padding: 1rem;
-    
 }
 
 /* Front Side */
-.flip-card-front {
-    /* background: rgba(255, 192, 203, 0.8);  */
+#about .flip-card-front {
     background: white;
     color: white;
 }
 
-.flip-card-front img {
+#about .flip-card-front img {
     width: 85%; 
     height: auto; 
     border-radius: 0.5rem;
-    /* margin-bottom: 1rem; */
 }
 
-.flip-card-front h3 {
+#about .flip-card-front h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem; 
 }
 
-.flip-card-front p {
+#about .flip-card-front p {
     font-size: 1rem;
     font-style: italic;
     font-family: Georgia;  
@@ -187,66 +182,98 @@ header .header-content a.cta-button:hover {
 }
 
 /* Back Side */
-.flip-card-back {
-    /* background: rgba(255, 192, 203, 0.8);  */
+#about .flip-card-back {
     background: hotpink; /* Dark background */
     color: white;
     transform: rotateY(180deg);
     text-align: center;
 }
 
-.flip-card-back h2 {
+#about .flip-card-back h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-.flip-card-back p {
+#about .flip-card-back p {
     font-size: 1.2rem;
     font-style: italic;
 }
 
 /* About Content Section */
-.about-content {
+#about .about-content {
     flex: 1;
     color: black;
 }
 
-.about-content h2 {
+#about .about-content h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-.about-content p {
+#about .about-content p {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1rem;
 }
 
-.read-more-button {
+#about .read-more-button {
     display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: black; 
-    color: white;
+    padding: 0.75rem 1.5rem;
+    background: #ff69b4; /* Vibrant pink button */
+    color: #fff;
     text-decoration: none;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
     font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.read-more-button:hover {
-    background-color: hotpink; /* Brighter pink on hover */
+#about .read-more-button:hover {
+    background: #ff1493; /* Darker pink hover effect */
+    transform: scale(1.1); /* Button pops slightly on hover */
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    #about .about-container {
+        flex-direction: column; /* Stack items vertically */
+        gap: 2rem; /* Adjust gap for smaller screens */
+        padding: 1rem;
+    }
+
+    #about .flip-card {
+        width: 12rem; /* Adjust card size for smaller screens */
+        height: 16rem;
+    }
+
+    #about .flip-card-front img {
+        max-width: 10rem; /* Adjust image size */
+    }
+
+    #about .about-content h2 {
+        font-size: 1.8rem;
+    }
+
+    #about .about-content p {
+        font-size: 0.95rem;
+        margin-bottom: 0.75rem;
+    }
+
+    #about .read-more-button {
+        padding: 0.5rem 1rem; /* Adjust button size */
+    }
+}
 
 /* Portfolio Section */
 #portfolio {
     position: relative;
     padding: 4rem 1.5rem;
-    background: linear-gradient(135deg, #fff 50%, #d8bfd8 50%);
+    background: radial-gradient(circle, rgba(255, 192, 203, 0.5) 0%, rgba(240, 240, 240, 1) 100%);
     overflow: hidden;
 }
 
 /* Wrapper for Image and Text */
-.portfolio-wrapper {
+#portfolio .portfolio-wrapper {
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -256,23 +283,23 @@ header .header-content a.cta-button:hover {
 }
 
 /* Image Content */
-.portfolio-image {
+#portfolio .portfolio-image {
     flex: 1;
     position: relative;
     transform: translateY(50px);
     animation: floatIn 1.2s ease-in-out forwards;
 }
 
-.portfolio-image img {
+#portfolio .portfolio-image img {
     width: 100%;
     border-radius: 1rem;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Text Content */
-.portfolio-content {
+#portfolio .portfolio-content {
     flex: 1;
-    z-index: 2; /* Ensures text stays above background */
+    z-index: 2; 
     background: rgba(255, 255, 255, 0.9);
     padding: 2rem;
     border-radius: 1rem;
@@ -281,24 +308,24 @@ header .header-content a.cta-button:hover {
     animation: slideIn 1s ease-in-out forwards;
 }
 
-.portfolio-content h2 {
+#portfolio .portfolio-content h2 {
     font-family: 'Georgia', serif;
     font-size: 2.5rem;
-    color: #333;
+    color: black;
     margin-bottom: 1rem;
 }
 
-.portfolio-content p {
+#portfolio .portfolio-content p {
     font-size: 1.125rem;
     line-height: 1.8;
-    color: #555;
+    color: black;
     margin-bottom: 1.5rem;
 }
 
-.view-more-button {
+#portfolio .view-more-button {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background: #8a2be2; /* Purple button */
+    background: #ff69b4; /* Vibrant pink button */
     color: #fff;
     text-decoration: none;
     border-radius: 0.5rem;
@@ -307,8 +334,8 @@ header .header-content a.cta-button:hover {
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.view-more-button:hover {
-    background: #6a0dad; /* Darker purple on hover */
+#portfolio .view-more-button:hover {
+    background: #ff1493; /* Darker pink hover effect */
     transform: scale(1.1); /* Button pops slightly on hover */
 }
 
@@ -327,22 +354,22 @@ header .header-content a.cta-button:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .portfolio-wrapper {
+    #portfolio .portfolio-wrapper {
         flex-direction: column-reverse; /* Image below text for smaller screens */
         text-align: center;
     }
 
-    .portfolio-content {
+    #portfolio .portfolio-content {
         transform: translateX(0); /* Reset for smaller screens */
         animation: none; /* Simplify animations on smaller devices */
     }
 
-    .portfolio-image {
+    #portfolio .portfolio-image {
         transform: translateY(0); /* Reset for smaller screens */
         animation: none; /* Simplify animations on smaller devices */
     }
 
-    .portfolio-image img {
+    #portfolio .portfolio-image img {
         margin-top: 1.5rem;
     }
 }
@@ -355,12 +382,11 @@ header .header-content a.cta-button:hover {
 #blog {
     position: relative;
     padding: 4rem 1.5rem;
-    background: linear-gradient(135deg, #ffb6c1 50%, #fff 50%);
-    overflow: hidden; /* Ensures no overflow from animations */
+    background: radial-gradient(circle, rgba(255, 192, 203, 0.5) 0%, rgba(240, 240, 240, 1) 100%);
 }
 
 /* Wrapper for Text and Image */
-.blog-wrapper {
+#blog .blog-wrapper {
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -370,7 +396,7 @@ header .header-content a.cta-button:hover {
 }
 
 /* Text Content */
-.blog-content {
+#blog .blog-content {
     flex: 1;
     z-index: 2; /* Ensures text stays above the image */
     background: rgba(255, 255, 255, 0.9);
@@ -381,21 +407,21 @@ header .header-content a.cta-button:hover {
     animation: slideIn 1s ease-in-out forwards;
 }
 
-.blog-content h2 {
+#blog .blog-content h2 {
     font-family: 'Georgia', serif;
     font-size: 2.5rem;
     color: black;
     margin-bottom: 1rem;
 }
 
-.blog-content p {
+#blog .blog-content p {
     font-size: 1.125rem;
     line-height: 1.8;
     color: black;
     margin-bottom: 1.5rem;
 }
 
-.read-more-button {
+#blog .read-more-button {
     display: inline-block;
     padding: 0.75rem 1.5rem;
     background: #ff69b4; /* Vibrant pink button */
@@ -407,20 +433,20 @@ header .header-content a.cta-button:hover {
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.read-more-button:hover {
+#blog .read-more-button:hover {
     background: #ff1493; /* Darker pink hover effect */
     transform: scale(1.1); /* Button pops slightly on hover */
 }
 
 /* Image Content */
-.blog-image {
+#blog .blog-image {
     flex: 1;
     position: relative;
     transform: translateY(50px);
     animation: floatIn 1.2s ease-in-out forwards;
 }
 
-.blog-image img {
+#blog .blog-image img {
     width: 100%;
     border-radius: 1rem;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -441,144 +467,162 @@ header .header-content a.cta-button:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .blog-wrapper {
+    #blog .blog-wrapper {
         flex-direction: column;
         text-align: center;
     }
 
-    .blog-content {
+    #blog .blog-content {
         transform: translateX(0); /* Reset for smaller screens */
         animation: none; /* Simplify animations on smaller devices */
     }
 
-    .blog-image {
+    #blog .blog-image {
         transform: translateY(0); /* Reset for smaller screens */
         animation: none; /* Simplify animations on smaller devices */
     }
 
-    .blog-image img {
+    #blog .blog-image img {
         margin-top: 1.5rem;
     }
 }
 
-
-
-/* #blog  {
-    background-color: white;
-    padding:3.125rem 1.25rem;
-    text-align: center;
-}
-
-#blog h3 {
-    color: black;
-    margin: 0.3125rem 0;
-}
-
-#blog p {
-    color:black;
-    text-align: center;
-}
-
-#blog a {
-    color: blue;
-    text-decoration: none;
-}
-
-#blog a:hover {
-    color: pink;
-}  */
-/* About portfolio Styles */
-/* #portfolio {
-    background-color: white;
-    padding:3.125rem 1.25rem;
-    text-align: center;
-}
-#portfolio p {
-    color:black;
-    text-align: center;
-}
-
-#portfolio h3 {
-    color:black;
-    margin: 0.3125rem 0;
-}
-
-#portfolio a {
-    color: blue;
-    text-decoration: none;
-} */
-
-/* 
-#portfolio  a:hover {
-    color: pink;
-}  */
-
-/* 
+/*contact form*/
 #contact {
-    background-color: #f9f9f9;
-    padding: 3.125rem 1.25rem;
+    padding: 4rem 1.5rem;
+    background: radial-gradient(circle, rgba(255, 192, 203, 0.5) 0%, rgba(240, 240, 240, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    color: black;
 }
 
-#contact form {
-    max-width: 37.5rem;
-    margin: auto;
-}
-
-#contact input, #contact textarea {
+/* Container for Contact Form */
+#contact .contact-container {
     width: 100%;
-    padding: 0.625rem; 
-    margin: 0.625rem 0;
-    border: 1px solid #ddd;
-    border-radius: 0.25rem;
+    max-width: 33rem; 
+    max-height: 35rem;
+    background: white;
+    padding: 2rem; 
+    border-radius: 1rem; 
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); 
 }
 
-#contact button {
-    padding: 0.625rem;
-    background-color: pink;
+/* Headings and Paragraph */
+#contact .contact-container h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem; 
+    margin-bottom: 1rem; 
+    color: black;
+}
+
+#contact .contact-container p {
+    font-size: 1.2rem; 
+    margin-bottom: 2rem; 
+    color: black;
+    line-height: 1.6; 
+}
+
+/* Form Styles */
+#contact .contact-container form input,
+#contact .contact-container form textarea {
+    width: 100%;
+    padding: 0.75rem; 
+    border: 0.0625rem solid #ddd; 
+    border-radius: 0.5rem; 
+    font-size: 1rem; 
+    background: #f9f9f9;
+    margin-bottom: 1.5rem; 
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact .contact-container form input:focus,
+#contact .contact-container form textarea:focus {
+    outline: none;
+    border-color: #ff69b4;
+    box-shadow: 0 0.25rem 0.5rem rgba(255, 105, 180, 0.3); /* 4px 8px */
+    background: white;
+}
+
+/* Submit Button */
+#contact .contact-container .submit-button {
+    display: inline-block;
+    width: auto;
+    padding: 0.75rem 1.5rem;
+    background: hotpink;
     color: white;
     border: none;
-    border-radius: 0.25rem;
+    border-radius: 0.375rem;
+    font-size: 1rem; 
+    font-weight: bold;
     cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+    margin: 1rem auto; 
 }
 
-#contact button:hover {
-    background-color: pink;
-}  */
 
+#contact .contact-container .submit-button:hover {
+    background: #ff1493; 
+    transform: scale(1.1); 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact {
+        padding: 3rem 1rem;
+    }
+
+    #contact .contact-container {
+        padding: 1.5rem; /* 24px */
+    }
+
+    #contact .contact-container h2 {
+        font-size: 2rem; /* 32px */
+    }
+}
 
 
 /* Footer Styles */
 footer {
-    background-color: palevioletred;
+    background: linear-gradient(90deg, palevioletred, hotpink);
     color: white;
-    padding: 0.9375rem 1.875rem; 
+    padding: 1.5rem 1rem;
     text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
-footer p {
-    font-size: 0.85rem;
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Footer Info Section */
+.footer-info p {
+    font-size: 0.875rem; /* Slightly larger for readability */
+    margin: 0.25rem 0;
 }
 
 footer a {
     color: #ffffff;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-footer a:hover, footer a:focus {
-    color: #ffc0cb;
-} 
+footer a:hover,
+footer a:focus {
+    color: #ffb6c1;
+}
 
-
+/* Responsive Design */
 @media (max-width: 768px) {
-    .header-content {
-        flex-direction: column; 
-    }
-
-    nav ul li {
-        display: block;
-        margin-right: 0; 
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
     }
 }
-
-
