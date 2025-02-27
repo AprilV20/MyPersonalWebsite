@@ -48,18 +48,29 @@ nav ul li a:hover {
     color: hotpink;
 }
 
-body {
+/* body {
     font-family: Arial, Calibri, sans-serif;
     margin: 0 auto; 
     width: 85%; 
     flex-wrap: wrap;
-    /* max-width: 800px;  */
+    /* max-width: 800px;  
     padding: 0;
+    border: 3px solid palevioletred;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+} */
+
+body {
+    font-family: Arial, Calibri, sans-serif;
+    margin: 0 auto;
+    width: 85%; 
+    flex-wrap: wrap;
+    /* Add padding-top to push content below the navbar */
+    padding-top: 3.75rem; /* Matches the height of the nav */
     border: 3px solid palevioletred;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.header-content {
+/* .header-content {
     
     display: flex;
     justify-content: center; 
@@ -68,7 +79,19 @@ body {
    
   
 } 
- 
+  */
+
+.header-content {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 2rem 1rem; /* Reduce padding to make the box smaller */
+    background: rgba(255, 255, 255, 0.8); /* Optional: Add a subtle background */
+    border-radius: 0.5rem; /* Optional: Add rounded corners for better design */
+    margin-top: 1rem; /* Add some spacing between the navbar and the box */
+}
+
+
 .text-content h1 {
     flex: 1;
     font-size: 2.5rem; 
