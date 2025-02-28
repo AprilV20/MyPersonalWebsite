@@ -120,17 +120,35 @@
     <section id="contact">
         <div class="contact-container">
             <h2>Contact Me</h2>
-            <p>I’d love to hear from you! Whether it’s about a project, collaboration, or just to say hi.</p>
-            <form action="contact/confirmation.html" method="GET">
+            <p>I’d love to hear from you! Whether it’s about a project, a future collaboration, or just to say hi.</p>
+            <form id="contactForm" action="contact/confirmation.html" method="GET">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
+                <label for="purpose">Reason for Contacting *</label>
+                <select id="purpose" name="purpose" required>
+                    <option value="" disabled selected>Choose an option</option>
+                    <option value="Networking">Networking</option>
+                    <option value="Collaboration">Collaboration</option>
+                    <option value="Job Opportunity">Job Opportunity</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                </select>
+
+                <!-- LinkedIn Profile (Optional) -->
+                <label for="linkedin">LinkedIn Profile (Optional)</label>
+                <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+
+
                 <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                 <button type="submit" class="submit-button">Send Message</button>
+
+                <!-- Real-time Validation Message -->
+                <p id="formError" style="color: red; display: none;">Please fill out all required fields.</p>
+            </form>
             </form>
         </div>
     </section>
-    
-    
+
+
     <footer>
         <div class="footer-container">
             <div class="footer-info">
@@ -142,7 +160,7 @@
         </div>
         <script src="js/scripts.js"></script>
     </footer>
-    
+
 
 </body>
 
