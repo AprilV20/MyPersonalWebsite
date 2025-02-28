@@ -524,8 +524,33 @@ header .header-content a.cta-button:hover {
     line-height: 1.6; 
 }
 
+/* Form Fields */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    
+}
+
+#contact .contact-container {
+    max-height: none; 
+    padding: 2.5rem;
+}
+
+/* adjust the reason for contact words to the left */
+
+#contact form label {
+    display: block;  /* Makes label take full width */
+    text-align: left; /* Align text to the left */
+    font-weight: bold; /* Makes it stand out */
+    margin-bottom: 0.3rem; /* Adds space between label and input */
+}
+
+
+
 /* Form Styles */
 #contact .contact-container form input,
+#contact .contact-container form select,
 #contact .contact-container form textarea {
     width: 100%;
     padding: 0.75rem; 
@@ -538,12 +563,15 @@ header .header-content a.cta-button:hover {
 }
 
 #contact .contact-container form input:focus,
+#contact .contact-container form select:focus,
 #contact .contact-container form textarea:focus {
     outline: none;
     border-color: #ff69b4;
     box-shadow: 0 0.25rem 0.5rem rgba(255, 105, 180, 0.3); /* 4px 8px */
     background: white;
 }
+
+
 
 /* Submit Button */
 #contact .contact-container .submit-button {
